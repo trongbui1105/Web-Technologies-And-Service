@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h3 class="text-center">Horizontal Form</h3>
+        <form role="form form-horizontal" class="w-50 p-3 mx-auto">
+            <div class="form-group">
+                <div class="card border-info">
+                    <div class="card-header text-primary">
+                        Biểu mẫu đăng nhập
+                    </div>
+                    <div class="card-body">
+                        <div class="row justify-content-center">
+                            <label for="email" class="text-end col-3 col-form-label fw-bold">Email:</label>
+                            <div class="col-6">
+                                <input type="email" id="email" class="form-control" placeholder="Nhập vào email">
+                            </div>
+                        </div>
+                        
+                        <div class="row justify-content-center pt-3">
+                            <label for="email" class="col-form-label col-3 text-end fw-bold">Mật khẩu:</label>
+                            
+                            <div class="col-6">
+                                <input type="password" class="form-control" placeholder="Nhập vào mật khẩu">
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center pt-3">
+                            <div class="col-3"></div>
+                            <div class="col-6">
+                                <input type="checkbox" class="form-check-input" id="check">
+                                <label class="form-check-label" for="check">Ghi nhớ tôi</label>
+                            </div>
+                        </div>  
+
+                        <div class="row justify-content-center pt-3">
+                            <div class="col-3"></div>
+                            <div class="col-6">
+                                <a href="#" class="btn btn-primary">Đăng nhập</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <h3 class="text-center">Vertical Form</h3>
+        <form role="form form-vertical" class="w-50 p-3 mx-auto">
+            <div class="form-group">
+                <div class="card border-info">
+                    <div class="card-header text-primary">
+                        Biểu mẫu đăng nhập
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <label for="email" class="col-form-label fw-bold">Email:</label>
+                            <div>
+                                <input type="email" id="email" class="form-control" placeholder="Nhập vào email">
+                            </div>
+                        </div>
+                        
+                        <div class="row pt-3">
+                            <label for="email" class="col-form-label fw-bold">Password:</label>
+                            
+                            <div>
+                                <input type="password" class="form-control" placeholder="Nhập vào mật khẩu">
+                            </div>
+                        </div>
+
+                        <div class="row pt-3">
+                            <div>
+                                <input type="checkbox" class="form-check-input" id="check">
+                                <label class="form-check-label" for="check">Ghi nhớ tôi</label>
+                            </div>
+                        </div>  
+
+                        <div class="row pt-3">
+                            <div>
+                                <a href="#" class="btn btn-primary">Đăng nhập</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <h3 class="text-center">Inline Form</h3>
+        <form role="form form-inline" class="w-75 p-3 mx-auto">
+            <div class="form-group">
+                <div class="card border-info">
+                    <div class="card-header text-primary">
+                        Biểu mẫu đăng nhập
+                    </div>
+                    <div class="card-body">
+                        <div class="row justify-content-center">
+                            <div class="col-auto">
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="bi bi-person-fill"></i>
+                                    </span>
+                                    <input type="text" class="form-control" placeholder="Nhập vào email">
+                                </div>
+                            </div>
+                            
+                            <div class="col-auto">
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="bi bi-lock-fill"></i>
+                                    </span>
+                                    <input type="password" class="form-control" placeholder="Nhập vào mật khẩu">
+                                </div>
+                            </div>
+
+                            <div class="col-auto">
+                                <div class="pt-2">
+                                    <input type="checkbox" class="form-check-input" id="check">
+                                    <label class="form-check-label" for="check">Ghi nhớ tôi</label>
+                                </div>
+                            </div>  
+
+                            <div class="col-auto">
+                                <div>
+                                    <a href="#" class="btn btn-primary">Đăng nhập</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <h3 class="text-center">Login Modal</h3>
+        <form role="form" class="w-25 p-1 mx-auto">
+            <div class="form-group">
+                <div class="card border-info p-3">
+                    <h4>
+                        Mở biểu mẫu đăng nhập
+                    </h4>
+                    <div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Đăng nhập</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                <div class="col-1"></div>
+                  <h5 class="col-10 modal-title text-center" id="exampleModalLabel">Đăng nhập</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                        <span class="input-group-lg">
+                            <i class="bi bi-person-fill"></i>
+                        </span>
+                        <label for="user-name" class="col-form-label fw-bold">Người dùng:</label>
+                        <input type="text" class="form-control" id="user-name" placeholder="Nhập tên người dùng">
+                    </div>
+                    <div class="mb-3">
+                        <span class="input-group-lg">
+                            <i class="bi bi-eye-fill"></i>
+                        </span>
+                        <label for="password" class="col-form-label fw-bold">Mật khẩu:</label>
+                        <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu">
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="checkbox" class="form-check-input" id="check">
+                        <label class="form-check-label" for="check">Ghi nhớ tôi</label>
+                    </div>
+
+                    <div class="mb-3">
+                        <a href="#" class="btn btn-success w-100">
+                            <span class="input-group-lg">
+                                <i class="bi bi-power "></i>
+                            </span> Đăng nhập
+                        </a>
+                    </div>                    
+                  </form>
+                </div>
+
+                <div class="modal-footer">
+                    <div class="me-auto">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                            <i class="bi bi-x-lg"></i>
+                            Hủy bỏ
+                        </button>
+                    </div>
+                    <div>
+                        Bạn chưa phải là thành viên? 
+                        <span><a href="#">Đăng ký</a></span>
+                    </div>
+                    <div>
+                        Quên <span><a href="#">mật khẩu?</a></span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bài tập 1</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="page-header">Các đoạn phim hay nhất</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <ul>
+            <li>
+              <a href="https://www.youtube.com/watch?v=EYJimpsoE3g"
+                >Một Bước Yêu Vạn Dặm Đau</a
+              >
+            </li>
+            <li>
+              <a href="https://www.youtube.com/watch?v=knW7-x7Y7RE"
+                >Hãy Trao Cho Anh</a
+              >
+            </li>
+            <li>
+              <a href="https://www.youtube.com/watch?v=1yfEAN1xxcY"
+                >Chung Kết Champion League</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="youtube.js"></script>
+
+    <script>
+      // Mã lệnh được viết tại đây
+      var videoLinks = document.querySelectorAll("a");
+      for (var i = 0; i < videoLinks.length; i++) {
+        var linkURL = videoLinks[i].getAttribute("href");
+        var thumbnailURL = youtube.generateThumbnailUrl(linkURL);
+
+        var thumbnailImg = document.createElement("img");
+        thumbnailImg.setAttribute("src", thumbnailURL);
+        videoLinks[i].appendChild(thumbnailImg);
+      }
+    </script>
+  </body>
+</html>

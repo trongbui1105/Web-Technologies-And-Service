@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Grid Template for Bootstrap</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="mt-2">
+            <div class="nav justify-content-end">
+                <div class="btn-group header-btn-group">
+                    <a class="btn btn-primary" href="index.html">Trang chủ</a>
+                    <a class="btn btn-primary" href="service.html">Dịch vụ</a>
+                    <a class="btn btn-primary" href="about.html">Về chúng tôi</a>
+                    <a class="btn btn-primary" href="faq.html">FAQ</a>
+                    <a class="btn btn-primary" href="contact.html">Liên hệ</a>
+                </div>
+            </div>
+            <h1><img src="img/logo.jpg" /></h1>
+        </header>
+        <hr/>
+        <h2 class="text-center">FAQ</h2>
+        <hr/>  
+        <div id="accordion" class="pb-5 pt-2">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        1. Tôi có thể trả tiền thông qua PayPal?
+                    </button>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">Được. Chúng tôi chấp nhận việc chi trả qua PayPal.</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                        2. Tôi có thể hủy bỏ đặt hàng?
+                    </button>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">Được. Bạn có thể hủy bỏ đặt hàng bất khi nào bạn muốn.</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                        3. Chính sách hoàn tiền như thế nào?
+                    </button>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">Bạn có thể nhận được tiền hoàn trả 100% bất kể khi nào và vì bất kỳ lý do gì.</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
+                        4. Làm thế nào để tôi có thể nhận được hóa đơn?
+                    </button>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">Bạn có thể nhận được hóa đơn thông qua email hoặc thư tín.</div>
+                </div>
+            </div>    
+        </div>
+        <hr/>
+        <footer>
+            <div>
+                <p>© Bản quyền thuộc về Công ty Du lịch Bụi.</p>
+                <ul class="nav float-right">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html">Dịch vụ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Về chúng tôi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bài tập 4.1</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="page-header">Các đoạn phim hay nhất</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <ul>
+            <li class="pb-5">
+              <a href="https://www.youtube.com/watch?v=EYJimpsoE3g"
+                >Một Bước Yêu Vạn Dặm Đau</a
+              >
+            </li>
+            <li class="pb-5">
+              <a href="https://www.youtube.com/watch?v=knW7-x7Y7RE"
+                >Hãy Trao Cho Anh</a
+              >
+            </li>
+            <li class="pb-5">
+              <a href="https://www.youtube.com/watch?v=1yfEAN1xxcY"
+                >Chung Kết Champion League</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-9" id="frame"></div>
+      </div>
+    </div>
+
+    <script src="youtube.js"></script>
+    <script src="jquery.js"></script>
+    <script src="jquery.funtext.js"></script>
+
+    <script>
+      $("a").each(function () {
+        var linkURL = $(this).attr("href");
+        var thumbnailURL = youtube.generateThumbnailUrl(linkURL);
+        var thumbnailImg = $("<img>").attr("src", thumbnailURL);
+        $(this).append(thumbnailImg);
+      });
+
+      $("#frame").html("<iframe></iframe>");
+      $("iframe").hide();
+
+      $("a").click(function (e) {
+        e.preventDefault();
+
+        var linkURL = $(this).attr("href");
+        var videoURL = youtube.generateEmbedUrl(linkURL);
+
+        $("iframe").fadeOut("slow", function () {
+          $("iframe").attr({
+            src: videoURL,
+            width: "900",
+            height: "500",
+          });
+          $("iframe").fadeIn();
+        });
+      });
+
+      $('h2').funText(33, 'reverseCandy');
+    </script>
+  </body>
+</html>

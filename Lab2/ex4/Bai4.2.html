@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bài tập 4.2</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+    />
+    <!-- <style type="text/css">
+		label.error {
+			color:red;
+			font-style: italic;
+		}
+	</style> -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <div class="page-header">
+            <div class="alert alert-info" role="alert">
+              <h4>Bài tập 4.2: jQuery Validation Plugin.</h4>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Đăng ký thành viên</h3>
+            </div>
+            <div class="panel-body">
+              <form method="post" class="form-horizontal" action="" id="form">
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Tên của bạn</label>
+                  <div class="col-sm-5">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Tên của bạn"
+                      id="firstname"
+                      name="firstname"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Họ của bạn</label>
+                  <div class="col-sm-5">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Họ của bạn"
+                      id="lastname"
+                      name="lastname"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Tên đăng nhập</label>
+                  <div class="col-sm-5">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Tên đăng nhập"
+                      id="username"
+                      name="username"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label" for="email"
+                    >Hộp thư điện tử</label
+                  >
+                  <div class="col-sm-5">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Hộp thư điện tử"
+                      id="email"
+                      name="email"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Mật khẩu</label>
+                  <div class="col-sm-5">
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="Mật khẩu"
+                      id="password"
+                      name="password"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label"
+                    >Nhập lại mật khẩu</label
+                  >
+                  <div class="col-sm-5">
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="Nhập lại mật khẩu"
+                      id="password2"
+                      name="password2"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-sm-6 col-sm-offset-4">
+                    <div class="checkbox">
+                      <label>
+                        <input
+                          type="checkbox"
+                          value="agree"
+                          id="checkagree"
+                          name="checkagree"
+                        />Đồng ý các quy định của chúng tôi
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-sm-9 col-sm-offset-4">
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      value="Sign up"
+                    >
+                      Đăng ký
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Cột nội dung -->
+      </div>
+      <!-- Dòng nội dung -->
+    </div>
+    <!-- Container -->
+
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery.validate.js"></script>
+
+    <script type="text/javascript">
+      $.validator.setDefaults({
+        submitHandler: function () {
+          alert("submitted!");
+        },
+      });
+
+      $(document).ready(function () {
+        $("#form").validate({
+          rules: {
+            firstname: "required",
+            lastname: "required",
+            username: {
+              required: true,
+              minlength: 2,
+            },
+            email: {
+              required: true,
+              email: true,
+            },
+            password: {
+              required: true,
+              minlength: 5,
+            },
+            password2: {
+              required: true,
+              minlength: 5,
+              equalTo: "#password",
+            },
+            checkagree: "required",
+          },
+          messages: {
+            firstname: "Bạn chưa nhập vào tên của bạn",
+            lastname: "Bạn chưa nhập vào họ của bạn",
+            username: {
+              required: "Bạn chưa nhập vào tên đăng nhập",
+              minlength: "Tên đăng nhập phải có ít nhất 2 ký tự",
+            },
+            email: {
+              required: "Bạn chưa nhập vào email",
+              email: "Email không hợp lệ",
+            },
+            password: {
+              required: "Bạn chưa nhập mật khẩu",
+              minlength: "Mật khẩu phải có ít nhất 5 ký tự",
+            },
+            password2: {
+              required: "Bạn chưa nhập mật khẩu",
+              minlength: "Mật khẩu phải có ít nhất 5 ký tự",
+              equalTo: "Mật khẩu không trùng khớp",
+            },
+            checkagree: "Bạn phải đồng ý với các quy định của chúng tôi",
+          },
+          highlight: function (element) {
+            $(element).closest(".form-group").addClass("has-error");
+            $(element).closest(".form-group").removeClass("has-success");
+          },
+          unhighlight: function (element) {
+            $(element).closest(".form-group").removeClass("has-error");
+          },
+          errorElement: "span",
+          errorClass: "help-block",
+        });
+      });
+    </script>
+  </body>
+</html>
