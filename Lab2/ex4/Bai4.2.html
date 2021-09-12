@@ -122,6 +122,7 @@
                           id="checkagree"
                           name="checkagree"
                         />Đồng ý các quy định của chúng tôi
+                        <span id="errorToShow"></span>
                       </label>
                     </div>
                   </div>
@@ -213,6 +214,13 @@
           },
           errorElement: "span",
           errorClass: "help-block",
+          errorPlacement: function (error, element) {
+            if ($(element).attr("name") == "checkagree") {
+              error.appendTo("#errorToShow");
+            } else {
+              error.insertAfter(element);
+            }
+          },
         });
       });
     </script>
