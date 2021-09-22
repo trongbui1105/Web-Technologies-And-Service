@@ -1,0 +1,11 @@
+{
+    "require": {
+        "illuminate/database": "5.*",
+        "gregwar/captcha": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "CT275\\Lab4\\": "src/"
+        }
+    }
+}
